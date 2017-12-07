@@ -1,9 +1,9 @@
 package servers
 
 import (
-	"SteamCondenserGo/helpers"
-	"net"
 	"fmt"
+	"github.com/kalys/SteamCondenserGo/helpers"
+	"net"
 )
 
 type GoldServer server
@@ -76,7 +76,6 @@ func (resp *serverResponse) bufferToResponse(b []byte) {
 	resp.Visibility = reader.ReadByte()
 	resp.Vac = reader.ReadByte()
 }
-
 
 func createPacket() []byte {
 	return []byte("\xFF\xFF\xFF\xFF")
